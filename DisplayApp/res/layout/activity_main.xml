@@ -1,0 +1,547 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Control Here:"/>
+    <!--
+    <EditText
+        android:id="@+id/entry"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:layout_below="@id/label" android:inputType="text"/>
+    -->
+    <Button
+        android:id="@+id/clearcube"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="200dp"
+        android:text="@string/button_clear_cube" />
+    <Button
+        android:id="@+id/clearlayer"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@id/clearcube"
+        android:layout_alignTop="@id/clearcube"
+        android:text="@string/button_clear_layer" />
+    <Button
+        android:id="@+id/send"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@id/clearlayer"
+        android:layout_alignTop="@id/clearcube"
+        android:text="@string/button_send" />
+
+    <!--  FIRST ROW  -->
+     <ToggleButton
+        android:id="@+id/LED11"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="200dp" />
+     <ToggleButton
+        android:id="@+id/LED21"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED11"
+        android:layout_alignTop="@id/LED11"
+        android:text="ToggleButton" />
+     <ToggleButton
+        android:id="@+id/LED31"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED21"
+        android:layout_alignTop="@id/LED11"
+        android:text="ToggleButton" />
+     <ToggleButton
+        android:id="@+id/LED41"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED31"
+        android:layout_alignTop="@id/LED11"
+        android:text="ToggleButton" />
+     <ToggleButton
+        android:id="@+id/LED51"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED41"
+        android:layout_alignTop="@id/LED11"
+        android:text="ToggleButton" />
+     <ToggleButton
+        android:id="@+id/LED61"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED51"
+        android:layout_alignTop="@id/LED11"
+        android:text="ToggleButton" />
+     <ToggleButton
+        android:id="@+id/LED71"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED61"
+        android:layout_alignTop="@id/LED11"
+        android:text="ToggleButton" />
+     <ToggleButton
+        android:id="@+id/LED81"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED71"
+        android:layout_alignTop="@id/LED11"
+        android:text="ToggleButton" />
+     <!--  SECOND ROW  -->
+     <ToggleButton
+        android:id="@+id/LED12"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="200dp"
+        android:layout_above="@id/LED11"
+        android:text="ToggleButton" />
+     <ToggleButton
+        android:id="@+id/LED22"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED12"
+        android:layout_alignTop="@id/LED12"
+        android:text="ToggleButton" />
+     <ToggleButton
+        android:id="@+id/LED32"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED22"
+        android:layout_alignTop="@id/LED12"
+        android:text="ToggleButton" />
+     <ToggleButton
+        android:id="@+id/LED42"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED32"
+        android:layout_alignTop="@id/LED12"
+        android:text="ToggleButton" />
+     <ToggleButton
+        android:id="@+id/LED52"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED42"
+        android:layout_alignTop="@id/LED12"
+        android:text="ToggleButton" />
+     <ToggleButton
+        android:id="@+id/LED62"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED52"
+        android:layout_alignTop="@id/LED12"
+        android:text="ToggleButton" />
+     <ToggleButton
+        android:id="@+id/LED72"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED62"
+        android:layout_alignTop="@id/LED12"
+        android:text="ToggleButton" />
+     <ToggleButton
+        android:id="@+id/LED82"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED72"
+        android:layout_alignTop="@id/LED12"
+        android:text="ToggleButton" />
+
+     <!--  THIRD ROW  -->
+     <ToggleButton
+        android:id="@+id/LED13"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="200dp"
+        android:layout_above="@id/LED12"/>
+     <ToggleButton
+        android:id="@+id/LED23"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED13"
+        android:layout_alignTop="@id/LED13"
+        android:text="ToggleButton" />
+     <ToggleButton
+        android:id="@+id/LED33"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED23"
+        android:layout_alignTop="@id/LED13"
+        android:text="ToggleButton" />
+     <ToggleButton
+        android:id="@+id/LED43"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED33"
+        android:layout_alignTop="@id/LED13"
+        android:text="ToggleButton" />
+     <ToggleButton
+        android:id="@+id/LED53"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED43"
+        android:layout_alignTop="@id/LED13"
+        android:text="ToggleButton" />
+     <ToggleButton
+        android:id="@+id/LED63"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED53"
+        android:layout_alignTop="@id/LED13"
+        android:text="ToggleButton" />
+     <ToggleButton
+        android:id="@+id/LED73"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED63"
+        android:layout_alignTop="@id/LED13"
+        android:text="ToggleButton" />
+     <ToggleButton
+        android:id="@+id/LED83"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED73"
+        android:layout_alignTop="@id/LED13"
+        android:text="ToggleButton" />
+     <!--  FOURTH ROW  -->
+     <ToggleButton
+        android:id="@+id/LED14"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="200dp"
+        android:layout_above="@id/LED13"/>
+     <ToggleButton
+        android:id="@+id/LED24"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED14"
+        android:layout_alignTop="@id/LED14"
+        android:text="ToggleButton" />
+     <ToggleButton
+        android:id="@+id/LED34"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED24"
+        android:layout_alignTop="@id/LED14"
+        android:text="ToggleButton" />
+     <ToggleButton
+        android:id="@+id/LED44"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED34"
+        android:layout_alignTop="@id/LED14"
+        android:text="ToggleButton" />
+     <ToggleButton
+        android:id="@+id/LED54"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED44"
+        android:layout_alignTop="@id/LED14"
+        android:text="ToggleButton" />
+     <ToggleButton
+        android:id="@+id/LED64"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED54"
+        android:layout_alignTop="@id/LED14"
+        android:text="ToggleButton" />
+     <ToggleButton
+        android:id="@+id/LED74"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED64"
+        android:layout_alignTop="@id/LED14"
+        android:text="ToggleButton" />
+     <ToggleButton
+        android:id="@+id/LED84"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED74"
+        android:layout_alignTop="@id/LED14"
+        android:text="ToggleButton" />
+     <!--  FIFTH ROW  -->
+     <ToggleButton
+        android:id="@+id/LED15"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="200dp"
+        android:layout_above="@id/LED14"/>
+     <ToggleButton
+        android:id="@+id/LED25"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED15"
+        android:layout_alignTop="@id/LED15"
+        android:text="ToggleButton" />
+     <ToggleButton
+        android:id="@+id/LED35"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED25"
+        android:layout_alignTop="@id/LED15"
+        android:text="ToggleButton" />
+     <ToggleButton
+        android:id="@+id/LED45"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED35"
+        android:layout_alignTop="@id/LED15"
+        android:text="ToggleButton" />
+     <ToggleButton
+        android:id="@+id/LED55"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED45"
+        android:layout_alignTop="@id/LED15"
+        android:text="ToggleButton" />
+     <ToggleButton
+        android:id="@+id/LED65"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED55"
+        android:layout_alignTop="@id/LED15"
+        android:text="ToggleButton" />
+     <ToggleButton
+        android:id="@+id/LED75"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED65"
+        android:layout_alignTop="@id/LED15"
+        android:text="ToggleButton" />
+     <ToggleButton
+        android:id="@+id/LED85"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED75"
+        android:layout_alignTop="@id/LED15"
+        android:text="ToggleButton" />
+     <!--  SIXTH ROW  -->
+     <ToggleButton
+        android:id="@+id/LED16"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="200dp"
+        android:layout_above="@id/LED15"/>
+     <ToggleButton
+        android:id="@+id/LED26"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED16"
+        android:layout_alignTop="@id/LED16" />
+     <ToggleButton
+        android:id="@+id/LED36"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED26"
+        android:layout_alignTop="@id/LED16" />
+     <ToggleButton
+        android:id="@+id/LED46"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED36"
+        android:layout_alignTop="@id/LED16" />
+     <ToggleButton
+        android:id="@+id/LED56"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED46"
+        android:layout_alignTop="@id/LED16" />
+     <ToggleButton
+        android:id="@+id/LED66"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED56"
+        android:layout_alignTop="@id/LED16" />
+     <ToggleButton
+        android:id="@+id/LED76"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED66"
+        android:layout_alignTop="@id/LED16" />
+     <ToggleButton
+        android:id="@+id/LED86"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED76"
+        android:layout_alignTop="@id/LED16" />
+     <!--  SEVENTH ROW  -->
+     <ToggleButton
+        android:id="@+id/LED17"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="200dp"
+        android:layout_above="@id/LED16"/>
+     <ToggleButton
+        android:id="@+id/LED27"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED17"
+        android:layout_alignTop="@id/LED17" />
+     <ToggleButton
+        android:id="@+id/LED37"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED27"
+        android:layout_alignTop="@id/LED17" />
+     <ToggleButton
+        android:id="@+id/LED47"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED37"
+        android:layout_alignTop="@id/LED17" />
+     <ToggleButton
+        android:id="@+id/LED57"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED47"
+        android:layout_alignTop="@id/LED17" />
+     <ToggleButton
+        android:id="@+id/LED67"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED57"
+        android:layout_alignTop="@id/LED17" />
+     <ToggleButton
+        android:id="@+id/LED77"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED67"
+        android:layout_alignTop="@id/LED17" />
+     <ToggleButton
+        android:id="@+id/LED87"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED77"
+        android:layout_alignTop="@id/LED17" />
+     <!--  EIGHTH ROW  -->
+     <ToggleButton
+        android:id="@+id/LED18"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="200dp" 
+        android:layout_above="@id/LED17" />
+     <ToggleButton
+        android:id="@+id/LED28"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED18"
+        android:layout_alignTop="@id/LED18" />
+     <ToggleButton
+        android:id="@+id/LED38"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED28"
+        android:layout_alignTop="@id/LED18" />
+     <ToggleButton
+        android:id="@+id/LED48"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED38"
+        android:layout_alignTop="@id/LED18" />
+     <ToggleButton
+        android:id="@+id/LED58"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED48"
+        android:layout_alignTop="@id/LED18" />
+     <ToggleButton
+        android:id="@+id/LED68"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED58"
+        android:layout_alignTop="@id/LED18" />
+     <ToggleButton
+        android:id="@+id/LED78"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED68"
+        android:layout_alignTop="@id/LED18" />
+     <ToggleButton
+        android:id="@+id/LED88"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@id/LED78"
+        android:layout_alignTop="@id/LED18" />
+     
+     <!--  Layer Buttons  -->
+     <RelativeLayout
+	    android:id="@+id/layer_buttons"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="horizontal" >
+	    
+	     <Button
+	        android:id="@+id/layerbutton1"
+	        android:layout_width="200dp"
+	        android:layout_height="70dp"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="200dp" 
+	        android:layout_marginBottom="20dp"
+	        android:text="@string/layer1" />
+	     <Button
+	        android:id="@+id/layerbutton2"
+	        android:layout_width="200dp"
+	        android:layout_height="70dp"
+	        android:layout_above="@id/layerbutton1"
+	        android:layout_alignLeft="@id/layerbutton1"
+	        android:text="@string/layer2" />
+	      <Button
+	        android:id="@+id/layerbutton3"
+	        android:layout_width="200dp"
+	        android:layout_height="70dp"
+	        android:layout_above="@id/layerbutton2"
+	        android:layout_alignLeft="@id/layerbutton1"
+	        android:text="@string/layer3" />
+	      <Button
+	        android:id="@+id/layerbutton4"
+	        android:layout_width="200dp"
+	        android:layout_height="70dp"
+	        android:layout_above="@id/layerbutton3"
+	        android:layout_alignLeft="@id/layerbutton1"
+	        android:text="@string/layer4" />
+	      <Button
+	        android:id="@+id/layerbutton5"
+	        android:layout_width="200dp"
+	        android:layout_height="70dp"
+	        android:layout_above="@id/layerbutton4"
+	        android:layout_alignLeft="@id/layerbutton1"
+	        android:text="@string/layer5" />
+	      <Button
+	        android:id="@+id/layerbutton6"
+	        android:layout_width="200dp"
+	        android:layout_height="70dp"
+	        android:layout_above="@id/layerbutton5"
+	        android:layout_alignLeft="@id/layerbutton1"
+	        android:text="@string/layer6" />
+	      <Button
+	        android:id="@+id/layerbutton7"
+	        android:layout_width="200dp"
+	        android:layout_height="70dp"
+	        android:layout_above="@id/layerbutton6"
+	        android:layout_alignLeft="@id/layerbutton1"
+	        android:text="@string/layer7" />
+	      <Button
+	        android:id="@+id/layerbutton8"
+	        android:layout_width="200dp"
+	        android:layout_height="70dp"
+	        android:layout_above="@id/layerbutton7"
+	        android:layout_alignLeft="@id/layerbutton1"
+	        android:text="@string/layer8" />
+      	</RelativeLayout>
+     
+</RelativeLayout>

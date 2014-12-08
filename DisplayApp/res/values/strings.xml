@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Game Cube: Display Control</string>
+    <string name="edit_message">Enter a message</string>
+    <string name="button_send">Display</string>
+    <string name="button_clear_cube">Clear Cube</string>
+    <string name="button_clear_layer">Clear Layer</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+	<string name="layer1">Layer 1</string>
+	<string name="layer2">Layer 2</string>
+	<string name="layer3">Layer 3</string>
+	<string name="layer4">Layer 4</string>
+	<string name="layer5">Layer 5</string>
+	<string name="layer6">Layer 6</string>
+	<string name="layer7">Layer 7</string>
+	<string name="layer8">Layer 8</string>
+</resources>

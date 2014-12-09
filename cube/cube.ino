@@ -9,20 +9,24 @@
 #define LATCH1 6  //74HC595 pin 12
 #define DATA1 7  //74HC595 pin 14
 
-
-/*display data
-#define N_LAYERS 8 //               (max z dimension)
-#define N_BYTES 8 //bytes per layer (max y dimension)
-byte data[N_LAYERS][N_BYTES];*/
 //display data
 #define DIM 8
-byte data[DIM*DIM];
-int layer_iter;
-int data_iter;
+volatile byte data[DIM*DIM];
+volatile int layer_iter;
+
+//test_display variables
+volatile byte count;
+volatile byte count1;
+volatile byte dir;
 
 
 void setup()
 {
+  //test_display variables
+  count = 0;
+  count1 = 0;
+  dir = 0;
+  
   /**CONFIGURE PINS**/
   pinMode(LATCH, OUTPUT);
   pinMode(DATA, OUTPUT);
@@ -38,10 +42,6 @@ void setup()
   }
   
   layer_iter = 0;
-  data_iter = 0;
-  
-  /**test data**/
-  data[0] = 0xFF;
   
   /**CONFIGURE TIMERS**/
   cli();//disable interrupts
@@ -58,15 +58,19 @@ void setup()
   // enable timer compare interrupt
   TIMSK1 |= (1 << OCIE1A);
   sei();//enable interrupts
+  
+  bluetooth.begin( 9600);
 }
 
 
 void display()
 {
+  test_display();
+    
   //turn off all LED's
   digitalWrite(LATCH, LOW);
   int i;
-  for(i = 0; i < DIM*DIM; i++)
+  for(i = 0; i < DIM; i++)
     shiftOut(DATA, CLOCK, MSBFIRST, 0);
   digitalWrite(LATCH, HIGH);
   
@@ -92,4 +96,37 @@ ISR(TIMER1_COMPA_vect)
 void loop()
 {
   
+}
+
+
+void test_display()
+{
+  if(++count == 50) {
+    if(++count1 == 9) {
+      dir = (dir==0 ? 1:0);
+      count1 = 0;
+    } else {
+      int x, i;
+      if(dir) {
+        for(x = 0; x < 8; x++) {
+          for(i = 0; i < 8; i++) {
+            if(i%2 == 0) 
+              data[i*8+x] = (data[i*8+x] << 1) | 0x1;
+            else
+              data[i*8+x] = (data[i*8+x] >> 1) | 0x80;
+          }
+        }
+      } else {
+        for(x = 0; x < 8; x++) {
+          for(i = 0; i < 8; i++) {
+            if(i%2 == 0) 
+              data[i*8+x] = (data[i*8+x] >> 1);
+            else
+              data[i*8+x] = (data[i*8+x] << 1);
+          }
+        }
+      }
+    }
+    count = 0;
+  }
 }

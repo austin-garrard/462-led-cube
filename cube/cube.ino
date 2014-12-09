@@ -59,7 +59,6 @@ void setup()
   TIMSK1 |= (1 << OCIE1A);
   sei();//enable interrupts
   
-  bluetooth.begin( 9600);
 }
 
 

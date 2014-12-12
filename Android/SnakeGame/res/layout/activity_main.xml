@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/button_start" />
+    <ImageButton
+        android:id="@+id/z_neg_button"
+        android:layout_width="200dp"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp" 
+        android:src="@drawable/zneg2" />
+    <ImageButton
+        android:id="@+id/x_neg_button"
+        android:layout_width="200dp"
+        android:layout_height="120dp"
+        android:layout_toRightOf="@+id/z_neg_button"
+        android:layout_above="@+id/z_neg_button"
+        android:src="@drawable/xneg2" />
+    <ImageButton
+        android:id="@+id/y_neg_button"
+        android:layout_width="200dp"
+        android:layout_height="120dp"
+        android:layout_toLeftOf="@+id/z_neg_button"
+        android:layout_above="@+id/z_neg_button"
+        android:src="@drawable/yneg2" />
+    <ImageButton
+        android:id="@+id/x_pos_button"
+        android:layout_width="200dp"
+        android:layout_height="120dp"
+        android:layout_toLeftOf="@+id/z_neg_button"
+        android:layout_above="@+id/y_neg_button"
+        android:layout_marginBottom="80dp"
+        android:src="@drawable/xpos2" />
+    <ImageButton
+        android:id="@+id/y_pos_button"
+        android:layout_width="200dp"
+        android:layout_height="120dp"
+        android:layout_toRightOf="@+id/z_neg_button"
+        android:layout_above="@+id/x_neg_button"
+        android:layout_marginBottom="80dp"
+        android:src="@drawable/ypos2" />
+    <ImageButton
+        android:id="@+id/z_pos_button"
+        android:layout_width="200dp"
+        android:layout_height="120dp"
+        android:layout_alignLeft="@+id/z_neg_button"
+        android:layout_above="@+id/x_pos_button"
+        android:src="@drawable/zpos2" />
+</RelativeLayout>
